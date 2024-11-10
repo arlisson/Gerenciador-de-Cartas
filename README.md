@@ -12,4 +12,9 @@ Para saber a sua versão do Java, digite no prompt de comando do seu sistema:
 ```cmd
 java -version
 ```
+# Arquivos
+## Executável .jar
+O arquivo executável é o [Projeto_YUGIOH.jar](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/Projeto_YUGIOH.rar)
+## Projeto .rar
+Caso queira alterar algo no código para você, esse é o link de do projeto: [Projeto_YUGIOH.rar](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/Projeto_YUGIOH.rar)
 

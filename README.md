@@ -17,4 +17,5 @@ java -version
 O arquivo executável é o [Projeto_YUGIOH.jar](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/Projeto_YUGIOH.rar)
 ## Projeto .rar
 Caso queira alterar algo no código para você, esse é o link de do projeto: [Projeto_YUGIOH.rar](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/Projeto_YUGIOH.rar)
-
+## Banco de dados
+O arquivo do banco de dados, com as tabelas utilizadas no projeto [yugioh.sql](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/yugioh.sql)

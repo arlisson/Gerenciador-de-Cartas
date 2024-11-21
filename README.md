@@ -20,5 +20,5 @@ Caso queira alterar algo no código para você, esse é o link de do projeto: [P
 ## Banco de dados
 O arquivo do banco de dados, com as tabelas utilizadas no projeto [yugioh.sql](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/yugioh.sql)
 
-#XAMPP
+## XAMPP
 O Sistema utiliza o XAMPP, um gerêncador de aplicações locais, para rodar o servidor de banco de dados, sendo assim, instale o XAMPP no seu computador, e crie o banco de dados nele.

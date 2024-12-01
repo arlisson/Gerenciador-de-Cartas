@@ -1,4 +1,4 @@
-# Gerenciador-de-Cartas
+# Gerenciador-de-Cartas BETA, Versão 1.0
 Esse projeto é um Gerenciador de cartas de Yu-Gi-Oh!, focado em catolagar as cartas adquiridas, salvando preço, ano da compra, coleção e etc. Dessa forma fica mais fácil de organizar a sua coleção, informando o preço gasto no total, seus lucros/prejuízos em caso de venda.
 
 # Versão do Java

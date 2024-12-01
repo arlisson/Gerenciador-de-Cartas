@@ -13,18 +13,4 @@ Para saber a sua versão do Java, digite no prompt de comando do seu sistema:
 ```cmd
 java -version
 ```
-# Arquivos
-## Executável .jar
-O arquivo executável é o [Projeto_YUGIOH.jar](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/Projeto_YUGIOH_1.0.jar)
-## Projeto .rar
-Caso queira alterar algo no código para atender a você, esse é o link do projeto: [Projeto_YUGIOH.rar](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/Projeto_YUGIOH.rar)
-## Banco de dados
-O arquivo do banco de dados, com as tabelas utilizadas no projeto [yugioh.sql](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/Bancos/yugioh.sql)
-
-## XAMPP
-O Sistema utiliza o XAMPP, um gerêncador de aplicações locais, para rodar o servidor de banco de dados, sendo assim, instale o XAMPP no seu computador, e crie o banco de dados nele.
-
-#IMPORTANTE!
-Para saber mais informações das versões do software, leia o README.txt em cada projeto.zip, ou leia na sequência:
-
 

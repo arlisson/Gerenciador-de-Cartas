@@ -13,4 +13,6 @@ Para saber a sua versão do Java, digite no prompt de comando do seu sistema:
 ```cmd
 java -version
 ```
-
+## Sobre os executáveis JAR
+Leia sobre as versões a partir da 2.0 aqui:
+- [Versão 2.0](https://github.com/arlisson/Gerenciador-de-Cartas/blob/main/Leiam-me/README_2.0.md)

@@ -133,6 +133,35 @@ public class CartaDAO {
                 Logger.getLogger(CartaDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+    
+    public List<String> seleciona_codigo_colecao(String s){
+        try {			
+			
+			PreparedStatement ps;
+			ps = connection.prepareStatement(SELECT_COLECAO);
+                        ps.setString(1, s);		
+			ResultSet result = ps.executeQuery();
+                        
+                        List<String> codigo = new ArrayList<>();
+			int i = 0;
+			while (result.next()) {
+				codigo.add(result.getString("codigo"));
+
+				i++;
+
+			}
+                        connection.commit(); 
+                        
+                        ps.close();                        
+                        
+                       
+			return codigo;
+
+		} catch (SQLException e) {
+			return null;
+		}
+        
+    }
         
     /**
      *
@@ -164,6 +193,7 @@ public class CartaDAO {
 		}
                 
         }
+    
         
     /**
      *

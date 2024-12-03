@@ -10,6 +10,9 @@ import DAO.CartaDAO;
 import Model.Carta;
 import java.awt.Color;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -41,7 +44,7 @@ import javax.swing.text.MaskFormatter;
  *
  * @author T-GAMER
  */
-public final class Tela extends javax.swing.JFrame {
+public final class Tela extends javax.swing.JFrame{
 
     CartaDAO cartadao;
 /**
@@ -500,9 +503,36 @@ public final class Tela extends javax.swing.JFrame {
         jLabel6.setText("Código");
 
         text_codigo.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        text_codigo.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                text_codigoAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        text_codigo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                text_codigoMouseClicked(evt);
+            }
+        });
         text_codigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 text_codigoActionPerformed(evt);
+            }
+        });
+        text_codigo.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                text_codigoPropertyChange(evt);
+            }
+        });
+        text_codigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                text_codigoKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                text_codigoKeyTyped(evt);
             }
         });
 
@@ -546,6 +576,20 @@ public final class Tela extends javax.swing.JFrame {
 
         cb_colecao.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         cb_colecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nome da Coleção" }));
+        cb_colecao.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                cb_colecaoAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        cb_colecao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cb_colecaoActionPerformed(evt);
+            }
+        });
 
         text_data_compra = new javax.swing.JFormattedTextField(mask);
         text_data_compra.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
@@ -819,6 +863,10 @@ public void preenche_tabela(int i, DefaultTableModel modelo, CartaDAO cartadao) 
              
 
 	}
+
+
+
+
 /**
  * 
  * @param file
@@ -1068,6 +1116,7 @@ StringBuilder colecoes = new StringBuilder();
                                             for (Carta c : cartadao.select_colecao_busca(text_colecao.getText())) {
 						colecoes.append(c.getColecao()).append("\n");
 						cb_colecao.addItem(c.getColecao());
+                                                
                                             } 
                                         }
 					
@@ -1176,6 +1225,52 @@ StringBuilder colecoes = new StringBuilder();
                                 
     }//GEN-LAST:event_cb_qualidadeAncestorAdded
 
+    private void cb_colecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_colecaoActionPerformed
+        // TODO add your handling code here:
+       if(cb_colecao.getSelectedIndex() >0){
+            String codigo = cartadao.seleciona_codigo_colecao(cb_colecao.getSelectedItem().toString()).getFirst();
+            text_codigo.setText("");
+            text_codigo.setText(codigo.split("-")[0]+"-");
+        }
+        
+        
+    }//GEN-LAST:event_cb_colecaoActionPerformed
+
+
+    
+    private void cb_colecaoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_cb_colecaoAncestorAdded
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_cb_colecaoAncestorAdded
+
+    private void text_codigoAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_text_codigoAncestorAdded
+        // TODO add your handling code here:
+        if(cb_colecao.getSelectedIndex() !=0){
+            String codigo = cartadao.seleciona_codigo_colecao(cb_colecao.getSelectedItem().toString()).get(0);
+            text_codigo.setText(codigo.split("-")[0]+"-");
+        }
+    }//GEN-LAST:event_text_codigoAncestorAdded
+
+    private void text_codigoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_text_codigoPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_codigoPropertyChange
+
+    private void text_codigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_text_codigoKeyTyped
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_text_codigoKeyTyped
+
+    private void text_codigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_text_codigoMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_text_codigoMouseClicked
+
+    private void text_codigoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_text_codigoKeyPressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_text_codigoKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -1246,4 +1341,6 @@ StringBuilder colecoes = new StringBuilder();
     private javax.swing.JTextField text_nome_carta;
     private javax.swing.JTextField text_valor_pago;
     // End of variables declaration//GEN-END:variables
+
+    
 }
